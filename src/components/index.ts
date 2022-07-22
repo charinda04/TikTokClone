@@ -1,3 +1,3 @@
-// import AppIcon from './appIcon/AppIcon';
+import Post from './post/Post';
 
-export {};
+export {Post};
