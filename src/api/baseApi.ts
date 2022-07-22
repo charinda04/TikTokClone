@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable class-methods-use-this */
 import { HttpMethods } from '@src/shared/enums';
 import axiosInstance from './axiosInstance';
 

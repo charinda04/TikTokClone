@@ -1,15 +1,8 @@
-import React, {useState} from 'react';
-import {
-  View,
-  StyleSheet,
-  FlatList,
-  Dimensions,
-  SafeAreaView,
-  ListRenderItemInfo,
-} from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet, FlatList, Dimensions, SafeAreaView, ListRenderItemInfo } from 'react-native';
 import postData from '@assets/data/posts';
-import {Post} from '@src/components';
-import {PostType} from '@src/shared/types';
+import { Post } from '@src/components';
+import { PostType } from '@src/shared/types';
 
 const styles = StyleSheet.create({
   container: {
@@ -35,9 +28,7 @@ const Home: React.FC = () => {
   //   fetchPost();
   // }, []);
 
-  const renderItem = ({item}: ListRenderItemInfo<PostType>): JSX.Element => (
-    <Post post={item} />
-  );
+  const renderItem = ({ item }: ListRenderItemInfo<PostType>): JSX.Element => <Post post={item} />;
 
   return (
     <SafeAreaView style={styles.container}>

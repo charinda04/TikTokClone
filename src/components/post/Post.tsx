@@ -1,13 +1,5 @@
-import {
-  View,
-  Text,
-  TouchableWithoutFeedback,
-  Image,
-  TouchableOpacity,
-  StyleSheet,
-  Dimensions,
-} from 'react-native';
-import React, {useState} from 'react';
+import { View, Text, TouchableWithoutFeedback, Image, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import React, { useState } from 'react';
 
 import Video from 'react-native-video';
 
@@ -15,7 +7,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Fontisto from 'react-native-vector-icons/Fontisto';
-import {PostType} from '@src/shared/types';
+import { PostType } from '@src/shared/types';
 
 const styles = StyleSheet.create({
   container: {
@@ -143,30 +135,14 @@ const Post: React.FC<Props> = props => {
     <View style={styles.container}>
       <TouchableWithoutFeedback onPress={onPlayPausePress}>
         <View>
-          <Video
-            source={{uri: videoUri}}
-            style={styles.video}
-            onError={e => console.log(e)}
-            resizeMode="cover"
-            repeat
-            paused={paused}
-          />
+          <Video source={{ uri: videoUri }} style={styles.video} onError={e => console.log(e)} resizeMode="cover" repeat paused={paused} />
 
           <View style={styles.uiContainer}>
             <View style={styles.rightContainer}>
-              <Image
-                style={styles.profilePicture}
-                source={{uri: post.user.imageUri}}
-              />
+              <Image style={styles.profilePicture} source={{ uri: post.user.imageUri }} />
 
-              <TouchableOpacity
-                style={styles.iconContainer}
-                onPress={onLikePress}>
-                <AntDesign
-                  name="heart"
-                  size={40}
-                  color={isLiked ? 'red' : 'white'}
-                />
+              <TouchableOpacity style={styles.iconContainer} onPress={onLikePress}>
+                <AntDesign name="heart" size={40} color={isLiked ? 'red' : 'white'} />
                 <Text style={styles.statsLabel}>{post.likes}</Text>
               </TouchableOpacity>
 
@@ -192,7 +168,7 @@ const Post: React.FC<Props> = props => {
                 </View>
               </View>
 
-              <Image style={styles.songImage} source={{uri: post.songImage}} />
+              <Image style={styles.songImage} source={{ uri: post.songImage }} />
             </View>
           </View>
         </View>
